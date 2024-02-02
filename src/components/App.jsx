@@ -1,10 +1,16 @@
 // Fichero src/components/App.jsxx
 import '../styles/App.scss';
+import Header from './Header';
 
 function App() {
 
-  return <h1>Título de mi página</h1>
+  return (
+    <header className='header'>
+      <Header/>
+    </header>
       
+  
+  )
 }
 
 export default App;
