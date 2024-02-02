@@ -15,6 +15,9 @@ function App() {
     setSearch(value)
   }
 
+
+  const dataFilter = countries.filter((country) => country.name.official.toLowerCase().includes(search.toLowerCase()))
+
   return (
     <>
     <Header/>
@@ -25,7 +28,7 @@ function App() {
       <AddCountry/>
     </div>
     <div>
-      <ListCountries data={countries}/>
+      <ListCountries data={dataFilter}/>
     </div>
       
   
