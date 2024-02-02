@@ -1,6 +1,6 @@
 import Country from "./Country";
 
-function ListCountries({data}) {
+function ListCountries({data, select}) {
 
     const mapData = () => {
         return data.map((country, i) => <li key={i}> <Country dataCountry = {country}/> </li>)

@@ -1,5 +1,5 @@
 
-function Filters({handleFilter}) {
+function Filters({handleFilter, handleSelect}) {
   return (
     <>
     <h4>Filters</h4>
@@ -8,7 +8,7 @@ function Filters({handleFilter}) {
           <input type="text" onChange={(ev) => handleFilter(ev.target.value)}/>
       </label>
       <label htmlFor="">By Continent
-          <select name="" id="">
+          <select onChange={(ev) => handleSelect(ev.target.value)}>
               <option value="">All</option>
               <option value="">Africa</option>
               <option value="">North America</option>

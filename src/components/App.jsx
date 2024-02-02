@@ -15,20 +15,28 @@ function App() {
     setSearch(value)
   }
 
+  const [select, setSelect] = useState("");
+
+  const changeSelect = (value) => {
+    setSelect(value)
+  }
+
 
   const dataFilter = countries.filter((country) => country.name.official.toLowerCase().includes(search.toLowerCase()))
+
+  const dataSelect = countries.filter((country) => country.continents.includes(search))
 
   return (
     <>
     <Header/>
     <div>
-      <Filters handleFilter={changeSearch}/>
+      <Filters handleFilter={changeSearch} handleSelect={changeSelect}/>
     </div>
     <div>
       <AddCountry/>
     </div>
     <div>
-      <ListCountries data={dataFilter}/>
+      <ListCountries data={dataFilter} select={dataSelect}/>
     </div>
       
   
