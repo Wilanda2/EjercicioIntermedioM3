@@ -1,7 +1,15 @@
+import Country from "./Country";
 
-function ListCountries() {
+function ListCountries({data}) {
+
+    const mapData = () => {
+        return data.map((country, i) => <li key={i}> <Country dataCountry = {country}/> </li>)
+    }
+
   return (
-    <div>ListCountries</div>
+    <ul className="listCountries">
+        {mapData()}
+    </ul>
   )
 }
 
